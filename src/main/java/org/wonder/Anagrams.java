@@ -11,10 +11,6 @@ public class Anagrams {
             return Arrays.asList(origin);
         }
 
-        if(origin.length() == 2){
-            return Arrays.asList(origin, origin.substring(1) + origin.substring(0, 1));
-        }
-
         List<String> result = new ArrayList<>();
 
         for (int i = 0; i < origin.length(); i++) {
