@@ -18,8 +18,10 @@ public class Anagrams {
         List<String> result = new ArrayList<>();
 
         for (int i = 0; i < origin.length(); i++) {
-            for (int j = 0; j < of(dropCharacter(origin , i)).size(); j++) {
-                result.add(origin.substring(i , i + 1) + of(dropCharacter(origin , i)).get(j));
+            String droppedCharacter = origin.substring(i , i + 1);
+            List<String> anagramsOfRest = of(dropCharacter(origin , i));
+            for (String anagramOfRest: anagramsOfRest) {
+                result.add(droppedCharacter + anagramOfRest);
             }
         }
 
