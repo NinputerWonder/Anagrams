@@ -15,12 +15,16 @@ public class Anagrams {
         }
 
         return Arrays.asList(
-                origin.substring(0, 1) + of("BC").get(0),
-                origin.substring(0, 1) + of("BC").get(1),
+                origin.substring(0, 1) + of(dropCharacter(origin, 0)).get(0),
+                origin.substring(0, 1) + of(dropCharacter(origin, 0)).get(1),
                 origin.substring(1, 2) + of("AC").get(0),
                 origin.substring(1, 2) + of("AC").get(1),
                 origin.substring(2, 3) + of("AB").get(0),
                 origin.substring(2, 3) + of("AB").get(1)
         );
+    }
+
+    static String dropCharacter(String origin, int index){
+        return "BC";
     }
 }
