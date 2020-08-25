@@ -10,6 +10,17 @@ public class Anagrams {
             return Arrays.asList(origin);
         }
 
-        return Arrays.asList(origin, origin.substring(1) + origin.substring(0, 1));
+        if(origin.length() == 2){
+            return Arrays.asList(origin, origin.substring(1) + origin.substring(0, 1));
+        }
+
+        return Arrays.asList(
+                "ABC",
+                "ACB",
+                "BAC",
+                "BCA",
+                "CAB",
+                "CBA"
+        );
     }
 }

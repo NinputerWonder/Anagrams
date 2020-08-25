@@ -28,4 +28,10 @@ public class AnagramsTest
     {
         assertThat(Anagrams.of("AB"), is(Arrays.asList("AB", "BA")));
     }
+
+    @Test
+    public void testThreeCharacters()
+    {
+        assertThat(Anagrams.of("ABC"), is(Arrays.asList("ABC", "ACB", "BAC", "BCA", "CAB", "CBA")));
+    }
 }
