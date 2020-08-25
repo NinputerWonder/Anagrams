@@ -21,5 +21,6 @@ public class AnagramsTest
     public void testOneCharacter()
     {
         assertThat(Anagrams.of("A"), is(Arrays.asList("A")));
+        assertThat(Anagrams.of("B"), is(Arrays.asList("B")));
     }
 }
