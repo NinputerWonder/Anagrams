@@ -17,14 +17,14 @@ public class Anagrams {
         return Arrays.asList(
                 origin.substring(0, 1) + of(dropCharacter(origin, 0)).get(0),
                 origin.substring(0, 1) + of(dropCharacter(origin, 0)).get(1),
-                origin.substring(1, 2) + of("AC").get(0),
-                origin.substring(1, 2) + of("AC").get(1),
-                origin.substring(2, 3) + of("AB").get(0),
-                origin.substring(2, 3) + of("AB").get(1)
+                origin.substring(1, 2) + of(dropCharacter(origin, 1)).get(0),
+                origin.substring(1, 2) + of(dropCharacter(origin, 1)).get(1),
+                origin.substring(2, 3) + of(dropCharacter(origin, 2)).get(0),
+                origin.substring(2, 3) + of(dropCharacter(origin, 2)).get(1)
         );
     }
 
     static String dropCharacter(String origin, int index){
-        return "BC";
+        return origin.substring(0, index) + origin.substring(index + 1);
     }
 }
