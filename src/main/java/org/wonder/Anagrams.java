@@ -18,8 +18,9 @@ public class Anagrams {
         List<String> result = new ArrayList<>();
 
         for (int i = 0; i < 3; i++) {
-            result.add(origin.substring(i , i + 1) + of(dropCharacter(origin , i)).get(0));
-            result.add(origin.substring(i , i + 1) + of(dropCharacter(origin , i)).get(1));
+            for (int j = 0; j < 2; j++) {
+                result.add(origin.substring(i , i + 1) + of(dropCharacter(origin , i)).get(j));
+            }
         }
 
         return result;
