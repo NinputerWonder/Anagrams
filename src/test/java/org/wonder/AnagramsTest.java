@@ -16,4 +16,10 @@ public class AnagramsTest
     {
         assertThat(Anagrams.of("") , is(Arrays.asList("")));
     }
+
+    @Test
+    public void testOneCharacter()
+    {
+        assertThat(Anagrams.of("A"), is(Arrays.asList("A")));
+    }
 }
