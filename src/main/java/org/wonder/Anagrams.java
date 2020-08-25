@@ -15,12 +15,12 @@ public class Anagrams {
         }
 
         return Arrays.asList(
-                "ABC",
-                "ACB",
-                "BAC",
-                "BCA",
-                "CAB",
-                "CBA"
+                "A" + "BC",
+                "A" + "CB",
+                "B" + "AC",
+                "B" + "CA",
+                "C" + "AB",
+                "C" + "BA"
         );
     }
 }
