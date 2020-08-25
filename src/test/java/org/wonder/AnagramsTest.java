@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.Arrays;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 
@@ -33,5 +34,11 @@ public class AnagramsTest
     public void testThreeCharacters()
     {
         assertThat(Anagrams.of("ABC"), is(Arrays.asList("ABC", "ACB", "BAC", "BCA", "CAB", "CBA")));
+    }
+
+    @Test
+    public void testCountOfAnagramsOfFourCharacters()
+    {
+        assertEquals(24, Anagrams.of("ABCD").size());
     }
 }
