@@ -16,12 +16,12 @@ public class Anagrams {
         }
 
         List<String> result = new ArrayList<>();
-        result.add(origin.substring(0 , 1) + of(dropCharacter(origin , 0)).get(0));
-        result.add(origin.substring(0 , 1) + of(dropCharacter(origin , 0)).get(1));
-        result.add(origin.substring(1 , 2) + of(dropCharacter(origin , 1)).get(0));
-        result.add(origin.substring(1 , 2) + of(dropCharacter(origin , 1)).get(1));
-        result.add(origin.substring(2 , 3) + of(dropCharacter(origin , 2)).get(0));
-        result.add(origin.substring(2 , 3) + of(dropCharacter(origin , 2)).get(1));
+
+        for (int i = 0; i < 3; i++) {
+            result.add(origin.substring(i , i + 1) + of(dropCharacter(origin , i)).get(0));
+            result.add(origin.substring(i , i + 1) + of(dropCharacter(origin , i)).get(1));
+        }
+
         return result;
     }
 
