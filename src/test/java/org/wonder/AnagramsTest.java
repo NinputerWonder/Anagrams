@@ -22,4 +22,10 @@ public class AnagramsTest
     {
         assertThat(Anagrams.of("A"), is(Arrays.asList("A")));
     }
+
+    @Test
+    public void testTwoCharacters()
+    {
+        assertThat(Anagrams.of("AB"), is(Arrays.asList("AB", "BA")));
+    }
 }
