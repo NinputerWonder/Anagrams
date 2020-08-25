@@ -10,6 +10,6 @@ public class Anagrams {
             return Arrays.asList(origin);
         }
 
-        return Arrays.asList("AB", "BA");
+        return Arrays.asList(origin, origin.substring(1) + origin.substring(0, 1));
     }
 }
